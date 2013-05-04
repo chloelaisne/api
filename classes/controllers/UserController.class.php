@@ -2,6 +2,13 @@
 
 class UserController {
 
+	/*
+	 * Get user data
+	 *
+	 * @param (Request) Contains all request parameters
+	 * @return (Array) Returns user ID, name, and email
+	 */
+
 	public function get($request) {
 
 		$query 		= "SELECT * FROM  `users` WHERE  `user_id` = :id LIMIT 1";
@@ -21,7 +28,7 @@ class UserController {
 				}
 
 			}
-			
+
 		}	
 
 		return;

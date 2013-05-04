@@ -50,6 +50,7 @@ Router::$routes = array(
  * Response format
  */
 
+// XML format specified in the request
 /*if(isset($_GET['output']) && $_GET['output'] == 'xml') {
 	Response::$type = 'xml';
 }*/
@@ -58,22 +59,32 @@ Router::$routes = array(
  * Controller
  */
 
+// Get GET/POST/DELETE request parameters
 $request = new Request($_SERVER['REQUEST_METHOD']);
 
+// If route hasn't been specified above
 if(!Router::route($request, $_SERVER['REQUEST_URI'])) {
 
+	// == FAIL == //
 	echo Response::format(null);
 
-} else {
+}
+// If route hasn been specified above
+else {
 
+	// Create new controller for route
 	$controller = new Router::$controller();
 
+	// Controller method does exist for request protocole
 	if(method_exists($controller, $_SERVER['REQUEST_METHOD'])) {
 		$response = $controller->$_SERVER['REQUEST_METHOD']($request);
-	} else {
+	}
+	// Controller method does not exist for request protocole
+	else {
 		$response = null; // 404 ERROR
 	}
 
+	// == SUCCESS == //
 	echo Response::format($response);
 
 }

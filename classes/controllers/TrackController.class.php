@@ -2,6 +2,13 @@
 
 class TrackController {
 
+	/*
+	 * Get track data
+	 *
+	 * @param (Request) Contains all request parameters
+	 * @return (Array) Returns track ID, title, and duration
+	 */
+
 	public function get($request) {
 
 		$query 		= "SELECT * FROM  `tracks` WHERE  `track_id` = :id LIMIT 1";
@@ -21,7 +28,7 @@ class TrackController {
 				}
 
 			}
-			
+
 		}
 
 		return;
