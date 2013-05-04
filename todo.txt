@@ -1,6 +1,3 @@
-- Single and doubles quotes for SQL
+- SQL addslashes and stipslashes
 - 403 and 404 errors
-- $_POST and $_GET escape
-- $_POST and $_GET check
 - Token
-- SQL execute success or fail
