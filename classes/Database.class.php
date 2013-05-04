@@ -2,7 +2,7 @@
 
 class Database {
 	
-	private static $dbname 		= 'deezer';
+	private static $dbname 		= 'api';
 	private static $host 		= '127.0.0.1';
 	private static $dns 		= null;
 	private static $username 	= 'root';
