@@ -4,7 +4,7 @@
 
 Select a track object
 
-> 	http://api.dev/track/:track_id
+	http://api.dev/track/:track_id
 
 Required parameters:
 * GET (int) :user_id
@@ -53,4 +53,4 @@ Remove a track from user's favorites
 
 Required parameters:
 * GET (int) :user_id
-* (int) :track_id
+* POST (int) :track_id
