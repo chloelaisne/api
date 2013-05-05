@@ -17,7 +17,7 @@ Required parameters:
 
 Select a user object
 
-> 	http://api.dev/user/:user_id
+	http://api.dev/user/:user_id
 
 Required parameters:
 * GET (int) :user_id
@@ -30,7 +30,7 @@ Required parameters:
 
 Select all tracks from user's favorites
 
-> 	http://api.dev/user/:user_id/favorites
+	http://api.dev/user/:user_id/favorites
 
 Required parameters:
 * GET (int) :user_id
@@ -39,7 +39,7 @@ Required parameters:
 
 Add a track to user's favorites
 
-> 	http://api.dev/user/:user_id/favorites/track
+	http://api.dev/user/:user_id/favorites/track
 
 Required parameters:
 * GET (int) :user_id
@@ -49,7 +49,7 @@ Required parameters:
 
 Remove a track from user's favorites
 
-> 	http://api.dev/user/:user_id/favorites/track
+	http://api.dev/user/:user_id/favorites/track
 
 Required parameters:
 * GET (int) :user_id
